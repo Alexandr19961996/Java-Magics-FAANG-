@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        //Variables and data types
-        // task 1
+        // Variables and data types.
+        // task 1.
         System.out.println("Oh, you’re a magician, friend! Welcome to Hogwarts!" + "\n");
 
-        // task 2
+        // task 2.
         String teachers = "School teachers:";
         String dumbledore = "Dumbledore";
         String mcgonagall = "Mcgonagall";
@@ -18,7 +18,7 @@ public class Main {
         System.out.println(teachers + "\n" + dumbledore + "\n" + mcgonagall + "\n" +
                 snape + "\n" + lupin + "\n" + hugrid + "\n");
 
-        // task 3
+        // task 3.
         int grade1 = new Random().nextInt(1, 10);
         int grade2 = new Random().nextInt(1, 10);
         boolean result = grade1 > 5 && grade2 > 5;
@@ -26,11 +26,11 @@ public class Main {
                 "result: " + result);
         System.out.println((double) (grade1 + grade2) / 2 + "\n");
 
-        // task 4
+        // task 4.
         System.out.println(4199 % 13 + 4199 % 14 + 4199 % 15 + 4199 % 16 + 4199 % 17 + 4199 % 19);
 
-        //Lines
-        // task 1
+        // Lines.
+        // task 1.
         StringBuilder stringBuilder = new StringBuilder(new Random().nextInt())
                 .append(new Random().nextInt())
                 .append(new Random().nextInt())
@@ -47,8 +47,25 @@ public class Main {
         System.out.println(answer);
         System.out.println(index);
 
-        //task 2
+        //task 2.
         castSpell();
+
+        // Branching.
+        // task 1.
+        int numberOne = new Random().nextInt();
+        int numberTwo = new Random().nextInt();
+        if (numberOne % 2 == 0 && numberTwo % 2 == 0) {
+            System.out.println(numberOne / 2 + numberTwo / 2);
+        } else if (numberOne % 2 == 0) {
+            System.out.println(numberOne / 2 + numberTwo);
+        } else if (numberTwo % 2 == 0) {
+            System.out.println(numberTwo / 2);
+        } else {
+            System.out.println(numberOne + numberTwo);
+        }
+
+        SoringHat soringHat = new SoringHat();
+        System.out.println(soringHat.sort());
     }
 
     public static void castSpell() {
