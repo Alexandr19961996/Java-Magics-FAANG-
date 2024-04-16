@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -67,7 +68,7 @@ public class Main {
         SoringHat soringHat = new SoringHat();
         System.out.println(soringHat.sort()); */
 
-        // Cycles.
+/*        // Cycles.
         // task 1.
         Quidditch quidditch = new Quidditch();
         quidditch.getBalls();
@@ -82,7 +83,38 @@ public class Main {
                 result += i;
             }
         }
-        System.out.println(result);
+        System.out.println(result);*/
+
+        // Arrays.
+        // task 1.
+        String[] recipe = {"Засушенная чешуя василиска", "Частичка души лесной феи", "Капля сока вампирской розы",
+                "Яд шершавого ядозуба", "Осколок кометы", "Слеза феникса"};
+        String[] potion = new String[6];
+        potion[2] = recipe[2];
+        potion[5] = recipe[5];
+        potion[0] = recipe[0];
+        potion[1] = recipe[1];
+        potion[3] = recipe[3];
+        potion[4] = recipe[4];
+        System.out.println(Arrays.equals(recipe, potion));
+
+        // task 2, 3.
+        Potion potion1 = new Potion();
+        potion1.prepare();
+
+        // task 4.
+        int[] mass = {1, 5, 46, -35, 24360};
+        int maxValue = mass[0];
+        int minValue = mass[1];
+        for (int i = 1; i < mass.length; i++) {
+            if (mass[i] > maxValue) {
+                maxValue = mass[i];
+            }
+            if (mass[i] < minValue) {
+                minValue = mass[i];
+            }
+        }
+        System.out.println("Max value = " + maxValue + ", min value = " + minValue + ".");
     }
 
     public static void castSpell() {
