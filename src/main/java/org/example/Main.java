@@ -1,5 +1,7 @@
 package org.example;
 
+import org.hogwarts.beast.Hippogriff;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -85,7 +87,7 @@ public class Main {
         }
         System.out.println(result);*/
 
-        // Arrays.
+        /*// Arrays.
         // task 1.
         String[] recipe = {"Засушенная чешуя василиска", "Частичка души лесной феи", "Капля сока вампирской розы",
                 "Яд шершавого ядозуба", "Осколок кометы", "Слеза феникса"};
@@ -114,7 +116,17 @@ public class Main {
                 minValue = mass[i];
             }
         }
-        System.out.println("Max value = " + maxValue + ", min value = " + minValue + ".");
+        System.out.println("Max value = " + maxValue + ", min value = " + minValue + ".");*/
+
+        // Principles of OOP.
+        // Classes and objects.
+        // task 1-4.
+        Hippogriff hippogriffOne = new Hippogriff();
+        Hippogriff hippogriffTwo = new Hippogriff("SomeNameTwo");
+        Hippogriff hippogriffThree = new Hippogriff("SomeNameThree", "Blue");
+        Hippogriff hippogriffFour = new Hippogriff("SomeNameFour", 5, "Blue", "fast fly");
+
+        hippogriffOne.setName("SomeNameOne");
     }
 
     public static void castSpell() {
