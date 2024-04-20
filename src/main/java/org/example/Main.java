@@ -1,5 +1,6 @@
 package org.example;
 
+import org.hogwarts.Student;
 import org.hogwarts.beast.Hippogriff;
 
 import java.util.Arrays;
@@ -127,6 +128,11 @@ public class Main {
         Hippogriff hippogriffFour = new Hippogriff("SomeNameFour", 5, "Blue", "fast fly");
 
         hippogriffOne.setName("SomeNameOne");
+
+        // Access modifiers.
+        // task 1-2.
+        Student student = new Student("Some name", "Some faculty", 21, new String[]{"One skill", "Two skill", "Third skill"});
+        System.out.println(hippogriffOne.giveRide(student));
     }
 
     public static void castSpell() {
