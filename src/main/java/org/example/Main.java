@@ -1,5 +1,6 @@
 package org.example;
 
+import org.hogwarts.Spell;
 import org.hogwarts.Student;
 import org.hogwarts.beast.Hippogriff;
 
@@ -119,7 +120,7 @@ public class Main {
         }
         System.out.println("Max value = " + maxValue + ", min value = " + minValue + ".");*/
 
-        // Principles of OOP.
+        /*// Principles of OOP.
         // Classes and objects.
         // task 1-4.
         Hippogriff hippogriffOne = new Hippogriff();
@@ -127,12 +128,34 @@ public class Main {
         Hippogriff hippogriffThree = new Hippogriff("SomeNameThree", "Blue");
         Hippogriff hippogriffFour = new Hippogriff("SomeNameFour", 5, "Blue", "fast fly");
 
-        hippogriffOne.setName("SomeNameOne");
+        hippogriffOne.setName("SomeNameOne");*/
 
-        // Access modifiers.
+        /*// Access modifiers.
         // task 1-2.
         Student student = new Student("Some name", "Some faculty", 21, new String[]{"One skill", "Two skill", "Third skill"});
-        System.out.println(hippogriffOne.giveRide(student));
+        System.out.println(hippogriffOne.giveRide(student));*/
+
+        // Exceptions.
+        // task 1 - 2.
+        Spell spellOne = new Spell("OneSkill", 3);
+        Spell spellTwo = new Spell("TwoSkill", 1);
+        Spell spellThree = new Spell("ThreeSkill", 6);
+        Spell spellFour = new Spell("FourSkill", 5);
+        Spell spellFive = new Spell("FiveSkill", 2);
+
+        Student studentOne = new Student("One name", "One faculty", 12, new String[]{"One skill", "Two skill, Three skill"});
+        Student studentTwo = new Student("Two name", "Two faculty", 15, new String[]{"One skill", "Two skill, Three skill"});
+        Student studentThree = new Student("Three name", "Three faculty", 17, new String[]{"One skill", "Two skill, Three skill"});
+
+        try {
+            studentOne.castSpell(spellOne);
+            //studentOne.castSpell(spellTwo);
+            //studentTwo.castSpell(spellThree);
+            //studentTwo.castSpell(spellFour);
+            //studentThree.castSpell(spellFive);
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static void castSpell() {
